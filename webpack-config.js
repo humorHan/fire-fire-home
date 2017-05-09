@@ -81,6 +81,7 @@ module.exports = function (isWatch, isDev) {
         entry: entries,
         output: {
             path: path.join(__dirname, 'dist'),
+            libraryTarget: 'umd',
             //publicPath: '/webpack2.x/dist/',
             filename: isDev ? "js/[name].js" : "js/[name]-[chunkhash].js",
             chunkFilename: isDev ? "js/[name]-chunk.js" : "js/[name]-chunk-[chunkhash].js"
