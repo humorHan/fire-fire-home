@@ -1,13 +1,12 @@
-@import "common/normalize.css";
-@import "common/base.scss";
-
-/*TODO 有待优化 -- 更改结构*/
+li{
+  list-style: none;
+}
 .wrapper{
   color: rgba(0, 0, 0, 0.68);
   box-sizing: border-box;
   position: relative;
   min-height: 500px;
-  width: 600px;
+  /*width: 600px;*/
   overflow: hidden;
   margin: 0 auto;
   border: 1px solid aliceblue;
@@ -43,7 +42,7 @@
     color: #4caf50;
     border-bottom: 1px solid #4caf50;
     font-weight: 500;
-    cursor: -webkit-grab;
+    cursor: move;
     user-select: none;
   }
   .pop-content{
@@ -66,8 +65,8 @@
       font-size: 14px;
     }
     .ok:hover{
-        background: #f7f2f2;
-        color: #437943;
+      background: #f7f2f2;
+      color: #437943;
     }
     .delete:hover{
       background: #f7f2f2;

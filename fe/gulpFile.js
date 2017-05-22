@@ -22,14 +22,14 @@ gulp.task('bundle', ['publish-img-dev'], function (done) {
 
 //发布图片资源
 gulp.task('publish-img-dev', ['publish-static-js-dev'], function () {
-    return gulp.src(path.join(__dirname, '/src/img/**/*.*'))
-        .pipe(gulp.dest(path.join(__dirname, '/dist/img/')));
+    return gulp.src(path.join(__dirname, 'img/**/*.*'))
+        .pipe(gulp.dest(path.join(__dirname, '../dist/img/')));
 });
 
 //发布静态js
 gulp.task('publish-static-js-dev', function () {
-    return gulp.src([path.join(__dirname, '/src/dep/jquery-3.1.1.min.js')])
-        .pipe(gulp.dest(path.join(__dirname, '/dist/dep/')));
+    return gulp.src([path.join(__dirname, '/dep/jquery-3.1.1.min.js')])
+        .pipe(gulp.dest(path.join(__dirname, '../dist/dep/')));
 });
 
 //线上
@@ -46,17 +46,18 @@ gulp.task('package', ['publish-img-dev'], function (done) {
 //发布图片资源
 gulp.task('publish-img-dev', ['publish-static-js'], function () {
     return gulp.src(path.join(__dirname, '/img/**/*.*'))
-        .pipe(gulp.dest(path.join(__dirname, '/dist/img/')));
+        .pipe(gulp.dest(path.join(__dirname, '../dist/img/')));
 });
 
 //发布静态js
-gulp.task('publish-static-js', ['del'], function () {
-    return gulp.src([path.join(__dirname, '/src/dep/jquery-3.1.1.min.js')])
-        .pipe(gulp.dest(path.join(__dirname, '/dist/dep/')));
+gulp.task('publish-static-js', /*['del'], */function () {
+    return gulp.src([path.join(__dirname, '/dep/jquery-3.1.1.min.js')])
+        .pipe(gulp.dest(path.join(__dirname, '../dist/dep/')));
 });
 
+/*
 //清理文件夹
 gulp.task('del', function () {
-    return gulp.src(path.join(__dirname, '/dist'), {read: false})
+    return gulp.src(path.join(__dirname, '../dist'), {read: false})
         .pipe(vinylPaths(del));
-});
+});*/

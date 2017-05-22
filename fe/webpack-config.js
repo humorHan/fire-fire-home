@@ -8,8 +8,8 @@ var OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var autoprefixer = require('autoprefixer');
-var jsDir = path.resolve(__dirname, 'src', 'js');
-var htmlDir = path.resolve(__dirname, 'src', 'html');
+var jsDir = path.resolve(__dirname, 'js');
+var htmlDir = path.resolve(__dirname, 'html');
 var node_modules = path.resolve(__dirname, 'node_modules');
 
 //入口文件
@@ -20,9 +20,9 @@ var entries = (function () {
         var fileName = filePath.substring(filePath.lastIndexOf('\/') + 1, filePath.lastIndexOf('.'));
         map[fileName] = filePath;
     });
-    map['vendor'] = [
-        path.join(__dirname, '/src/dep/jquery-3.1.1.min.js')
-    ];
+    /*map['vendor'] = [
+        path.join(__dirname, '/dep/jquery-3.1.1.min.js')
+    ];*/
     return map;
 })();
 
@@ -80,23 +80,22 @@ module.exports = function (isWatch, isDev) {
         devtool: isDev ? "#inline-source-map" : false,//eval-source-map / source-map
         entry: entries,
         output: {
-            path: path.join(__dirname, 'dist'),
-            //publicPath: '/webpack2.x/dist/',
+            path: path.join(__dirname, '../', 'dist'),
             libraryTarget: 'umd',
             filename: isDev ? "js/[name].js" : "js/[name]-[chunkhash].js",
             chunkFilename: isDev ? "js/[name]-chunk.js" : "js/[name]-chunk-[chunkhash].js"
         },
         resolve: {
             modules: [
-                path.join(__dirname, 'src', 'dep'),
-                path.join(__dirname, 'src', 'scss'),
-                path.join(__dirname, 'src', 'tpl'),
+                path.join(__dirname, 'dep'),
+                path.join(__dirname, 'scss'),
+                path.join(__dirname, 'tpl'),
                 path.join(__dirname, 'node_modules')
             ],
             extensions: ['.js', '.tpl', '.scss', '.json'],
             alias: {
-                //'mock': path.join(__dirname, 'src', 'dep', 'mock.js'),
-                'jquery': path.join(__dirname, 'src', 'dep', 'jquery-3.1.1.js')
+                //'mock': path.join(__dirname, 'dep', 'mock.js'),
+                'jquery': path.join(__dirname, 'dep', 'jquery-3.1.1.js')
             }
         },
         module: {
@@ -104,8 +103,8 @@ module.exports = function (isWatch, isDev) {
                 {
                     test: /\.scss$/,
                     include: [
-                        path.join(__dirname, 'src', '/scss'),
-                        path.join(__dirname, '/src/dep/components')
+                        path.join(__dirname, '/scss'),
+                        path.join(__dirname, '/dep/components')
                     ],
                     use: isDev ?
                         cssExtractTextPlugin.extract({
@@ -126,8 +125,8 @@ module.exports = function (isWatch, isDev) {
                 }, {
                     test: /\.tpl$/,
                     include: [
-                        path.join(__dirname, 'src', 'tpl'),
-                        path.join(__dirname, '/src/dep/components')
+                        path.join(__dirname, 'tpl'),
+                        path.join(__dirname, '/dep/components')
                     ],
                     loader: 'tmodjs-loader'
                 }, {
@@ -137,15 +136,15 @@ module.exports = function (isWatch, isDev) {
                 }, {
                     test: /^es5-sham\.min\.js|es5-shim\.min\.js$/,
                     include: [
-                        path.join(__dirname, 'src', 'js'),
-                        path.join(__dirname, 'src', 'dep')
+                        path.join(__dirname, 'js'),
+                        path.join(__dirname, 'dep')
                     ],
                     loader: 'babel-loader',
                     exclude: node_modules
                 }, {
                     test: /\.html$/,
                     include: [
-                        path.join(__dirname, 'src', 'html')
+                        path.join(__dirname, 'html')
                     ],
                     //loader: 'html?minimize=false&interpolate=true',
                     loader: 'html-loader'
