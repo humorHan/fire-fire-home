@@ -1,4 +1,4 @@
-var EventProxy = require('eventproxy');
+let EventProxy = require('eventproxy');
 
 const HOST = '127.0.0.1';
 const USER = 'root';
@@ -21,7 +21,7 @@ function connect(opt) {
             connection.release(); //释放链接
             var resultArray = {
                 status: 1,
-                message: '',
+                message: '获取数据成功',
                 data: null
             };
             if (err) {

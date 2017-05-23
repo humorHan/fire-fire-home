@@ -1,19 +1,21 @@
-var express = require('express');
-var router = express.Router();
-var EventProxy = require('eventproxy');
-var connect = require('./base.js');
-var SQL = require('../sql/article.js');
+let express = require('express');
+let router = express.Router();
+let EventProxy = require('eventproxy');
+let connect = require('./base.js');
+let SQL = {
+    'getArticles': 'select * from fireFireHome.articles'
+};
 
-// 获取文章类型 -- test API
-router.get('/getArticlesType', function (req, res, next) {
-    var ep = new EventProxy();
+// 获取文章
+router.get('/getArticles', function (req, res, next) {
+    let ep = new EventProxy();
     connect({
-        sql: SQL.getArticlesType,
+        sql: SQL.getArticles,
         cb: function (result) {
-            ep.emit('getArticlesType', result);
+            ep.emit('getArticles', result);
         }
     });
-    ep.on("getArticlesType", function (data) {
+    ep.on("getArticles", function (data) {
         res.json(data);
     });
 });
