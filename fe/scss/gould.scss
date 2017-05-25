@@ -1,0 +1,36 @@
+@import "common/normalize.css";
+@import "common/base.scss";
+
+#container {
+  width: 800px;
+  height: 500px;
+  border: 1px solid #4CAF50;
+}
+
+.info-title {
+  padding: 5px;
+  color: #333;
+}
+
+.info-content {
+  font-size: 14px;
+  line-height: 1.2;
+  padding: 5px 10px;
+  color: #333;
+  img {
+    width: 14px;
+  }
+}
+h4{
+  float: left;
+}
+.explain{
+  color: rgba(51, 51, 51, 0.47);
+  font-weight: 500;
+  font-size: 14px;
+  margin: 10px auto;
+  width: 100px;
+  li{
+    list-style-type: hiragana-iroha;
+  }
+}
