@@ -22,10 +22,10 @@ var main = {
             summary: $(".summary").val(),
             createTime: +new Date()
         };
-       /* if (!($.trim(data.title) && $.trim(data.articleURL))){
+        if (!($.trim(data.title) && $.trim(data.articleURL))){
             alert ('文章标题都不可为空');
             return false;
-        }*/
+        }
         ajax({
             type: 'POST',
             url: '/addArticle',
