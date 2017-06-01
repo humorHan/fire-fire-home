@@ -32,7 +32,7 @@ var main = {
             data: data,
             success: function (data) {
                 if (data.status === 1) {
-
+                    alert ('添加文章信息成功，快去编写文章吧');
                 }
             }
         });
