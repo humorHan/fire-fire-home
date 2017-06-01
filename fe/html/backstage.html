@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>后台管理</title>
+</head>
+<body>
+<div id="add-content">
+    <h3 class="title">Add</h3>
+    <div class="form">
+        <select class="type select block mtb20">
+            <option value="js">js</option>
+            <option value="css">css</option>
+            <option value="other">other</option>
+        </select>
+        <div class="block mtb20">
+            <label>
+                <input class="radio" type="radio" checked name="original"> 原创
+            </label>
+            <label>
+                <input class="radio ml20" type="radio" name="original"> 翻译
+            </label>
+        </div>
+
+        <input class="articleURL input block mtb20" type="text" placeholder="请输入文章名称(地址)">
+        <input class="articleTitle input block mtb20" type="text" placeholder="请输入文章标题">
+        <input class="article-label input block mtb20" type="text" placeholder="请输入标签，以^隔开">
+        <textarea class="summary block textarea" rows="5" name="summary" placeholder="请输入文章概述"></textarea>
+
+        <div class="submit mtb20">提交</div>
+    </div>
+</div>
+<script src="../dep/jquery-3.1.1.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+.form {
+  .input,
+  .select,
+  .textarea {
+    outline: none;
+    box-sizing: border-box;
+    border: 1px solid #e1e2e3;
+    border-radius: 4px;
+  }
+  .input {
+    width: 160px;
+    height: 34px;
+    padding: 0 5px;
+  }
+  .select{
+    height: 34px;
+    background: transparent;
+    width: 100px;
+  }
+  .textarea{
+    padding: 5px;
+  }
+  .submit{
+    text-align: center;
+    width: 100px;
+    height: 38px;
+    background-color: #3fa46a;
+    line-height: 38px;
+    color: #fff;
+    letter-spacing: 2px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 2px 12px #bfbfa0;
+    &:hover{
+      background-color: #49b375;
+      box-shadow: 0 2px 12px #bfbfa0;
+    }
+  }
+}

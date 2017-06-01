@@ -1,7 +1,25 @@
-li{
+
+.mtb20 {
+  margin: 20px 0;
+}
+.ml20{
+  margin-left: 20px;
+}
+
+.block {
+  display: block;
+}
+
+li {
   list-style: none;
 }
-.wrapper{
+
+body{
+  font-size: 14px;
+  color: #333;
+}
+
+.wrapper {
   color: rgba(0, 0, 0, 0.68);
   box-sizing: border-box;
   position: relative;
@@ -11,7 +29,8 @@ li{
   margin: 0 auto;
   border: 1px solid aliceblue;
 }
-.pop-mask{
+
+.pop-mask {
   /*display: none;*/
   z-index: 98;
   position: fixed;
@@ -23,7 +42,7 @@ li{
   opacity: .6;
 }
 
-.pop-up{
+.pop-up {
   /*display: none;*/
   box-shadow: 1px 2px 10px #b2b1b9;
   position: fixed;
@@ -35,7 +54,7 @@ li{
   top: 20%;
   background-color: #FFF;
   border-radius: 4px;
-  .pop-title{
+  .pop-title {
     padding: 0 10px;
     height: 40px;
     line-height: 40px;
@@ -45,14 +64,14 @@ li{
     cursor: move;
     user-select: none;
   }
-  .pop-content{
+  .pop-content {
     margin: 10px 30px;
     min-height: 100px;
   }
-  .pop-handle{
+  .pop-handle {
     text-align: center;
     margin: 10px;
-    .handle-style{
+    .handle-style {
       display: inline-block;
       line-height: 28px;
       text-align: center;
@@ -64,11 +83,11 @@ li{
       margin: 0 10px;
       font-size: 14px;
     }
-    .ok:hover{
+    .ok:hover {
       background: #f7f2f2;
       color: #437943;
     }
-    .delete:hover{
+    .delete:hover {
       background: #f7f2f2;
       color: #f96f6f;
     }

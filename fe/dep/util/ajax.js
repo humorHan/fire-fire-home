@@ -4,6 +4,7 @@
 let url = 'http://localhost:3000';
 
 module.exports = function (opt) {
+    $.ajaxSetup({cache: false});
     return $.ajax({
         type: opt.type || 'GET',
         url: url + opt.url,

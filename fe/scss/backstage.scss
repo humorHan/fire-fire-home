@@ -1,0 +1,24 @@
+@import "common/normalize.css";
+@import "common/base.scss";
+@import "common/backstage-myself.scss";
+
+body {
+  padding: 20px;
+}
+
+#add-content {
+  font-size: 14px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #e1e2e3;
+  box-sizing: border-box;
+  border-radius: 8px;
+  box-shadow: 0 0 15px #eee;
+  h3.title {
+    font-size: 22px;
+  }
+  .summary{
+    width: 80%;
+  }
+}

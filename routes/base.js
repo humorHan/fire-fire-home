@@ -28,7 +28,7 @@ function connect(opt) {
                 resultArray.status = -1;
                 resultArray.message = err.message;
                 ep.emit('error', resultArray.message);
-                //logger.info('sqlErr', err);
+                console.info('sqlErr', err);
             } else if (resultArray.status === 1) {
                 //返回结果
                 resultArray.data = result;
