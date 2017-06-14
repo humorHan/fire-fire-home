@@ -72,7 +72,7 @@ function checkParamNull(ep, res, arr) {
         });
     });
 
-    for (let i = 0,len = arr.length; i++ < len;){
+    for (let i = 0,len = arr.length; i < len; i++){
         if (!arr[i].param) {
             ep.emit('error', arr[i].tip);
             return true;
