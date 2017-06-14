@@ -37,7 +37,7 @@ let hit = {
                 this.my *= -1;
             } else if (this.my < 0) { //从右边撞过去的--x方向反弹
                 this.mx *= -1;
-            } else {                  //从右上角撞过去的--反弹
+            } else {                  //从右上角撞过去的--反弹 以下判断同理，不赘述
                 this.mx *= -1;
                 this.my *= -1;
             }
