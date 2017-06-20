@@ -21,7 +21,8 @@ function connect(opt) {
             connection.release(); //释放链接
             var resultArray = {
                 status: 1,
-                message: '获取数据成功',
+                //message: '获取数据成功',
+                message: '操作数据成功',
                 data: null
             };
             if (err) {

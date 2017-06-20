@@ -2,7 +2,6 @@
  * Created by humorHan on 2017/5/23.
  */
 let url = 'http://localhost:3000';
-
 module.exports = function (opt) {
     $.ajaxSetup({cache: false});
     return $.ajax({

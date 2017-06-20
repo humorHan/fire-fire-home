@@ -20,9 +20,9 @@ var entries = (function () {
         var fileName = filePath.substring(filePath.lastIndexOf('\/') + 1, filePath.lastIndexOf('.'));
         map[fileName] = filePath;
     });
-    /*map['vendor'] = [
-        path.join(__dirname, '/dep/jquery-3.1.1.min.js')
-    ];*/
+    map['vendor'] = [
+        path.join(__dirname, 'js', 'common', 'base.js')
+    ];
     return map;
 })();
 
@@ -42,7 +42,7 @@ var htmlPlugin = (function () {
         } else {
             conf.inject = 'body';
             conf.chunks = ['vendor'];
-            console.error('没有匹配到和html相同文件名的js,请检查!');
+            console.error('没有匹配到和html(' + fileName + ')相同文件名的js,请检查!');
             //throw new Error('没有匹配到和html相同文件名的js,请检查!');
         }
         conf.chunksSortMode = function (chunk1, chunk2) {
@@ -81,6 +81,8 @@ module.exports = function (isWatch, isDev) {
         entry: entries,
         output: {
             path: path.join(__dirname, '../', 'dist'),
+            //publicPath: "/fire-fire-home/dist/",
+            publicPath: "../",
             libraryTarget: 'umd',
             filename: isDev ? "js/[name].js" : "js/[name]-[chunkhash].js",
             chunkFilename: isDev ? "js/[name]-chunk.js" : "js/[name]-chunk-[chunkhash].js"

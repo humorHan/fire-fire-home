@@ -1,9 +1,25 @@
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  &.infinite {
+    animation-iteration-count: infinite;
+  }
+}
 
 .mtb20 {
   margin: 20px 0;
 }
-.ml20{
+
+.ml10{
+  margin-left: 10px;
+}
+
+.ml20 {
   margin-left: 20px;
+}
+
+.mtb10{
+  margin: 10px 0;
 }
 
 .block {
@@ -14,22 +30,84 @@ li {
   list-style: none;
 }
 
-body{
+.font12{
+  font-size: 12px;
+}
+
+body {
   font-size: 14px;
-  color: #333;
+  color: #111;
+  background: url("../img/bg.png") center center repeat;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .wrapper {
-  color: rgba(0, 0, 0, 0.68);
+  opacity: .6;
+  //margin: 80px 30px 10px;
+  margin: 80px auto;
+  width: 60%;
   box-sizing: border-box;
   position: relative;
   min-height: 500px;
-  /*width: 600px;*/
   overflow: hidden;
-  margin: 0 auto;
-  border: 1px solid aliceblue;
+  //background: url("../img/bg.png") center center repeat;
+  .article {
+    display: block;
+    box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    padding: 20px;
+    background: #FFF;
+    cursor: pointer;
+    margin-top: 30px;
+    color: #111;
+    text-decoration: none;
+    .article-label{
+      margin: 10px 0 20px;
+      font-size: 12px;
+      display: inline-block;
+      padding: 5px 10px;
+      background: #e1e2e3;
+      border-radius: 5px;
+    }
+  }
 }
-
+.nav {
+  z-index: 99;
+  position: fixed;
+  height: 60px;
+  background: #FFF;
+  width: 100%;
+  line-height: 60px;
+  box-sizing: border-box;
+  box-shadow: 0 0 15px #eee;
+  .github {
+    height: 36px;
+    width: 36px;
+    margin: 12px 12px;
+    .github-img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+  .soup {
+    height: 100%;
+    max-width: 60%;
+    margin-left: 5%;
+  }
+}
 .pop-mask {
   /*display: none;*/
   z-index: 98;
