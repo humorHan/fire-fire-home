@@ -2,21 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="126104d0-4f90-41af-8ff5-82c5787259f9" name="Default" comment="change">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fe/img/bg.png" afterPath="$PROJECT_DIR$/fe/img/bg.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fe/img/github.png" afterPath="$PROJECT_DIR$/fe/img/github.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/html/drag.html" afterPath="$PROJECT_DIR$/dist/html/drag.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fe/html/backstage.html" afterPath="$PROJECT_DIR$/fe/html/backstage.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fe/html/demo/address-from-ip.html" afterPath="$PROJECT_DIR$/fe/html/demo/address-from-ip.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fe/html/demo/address.html" afterPath="$PROJECT_DIR$/fe/html/demo/address.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fe/html/demo/charts-test.html" afterPath="$PROJECT_DIR$/fe/html/demo/charts-test.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fe/html/demo/drag.html" afterPath="$PROJECT_DIR$/fe/html/demo/drag.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fe/html/demo/gould.html" afterPath="$PROJECT_DIR$/fe/html/demo/gould.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fe/html/demo/hit.html" afterPath="$PROJECT_DIR$/fe/html/demo/hit.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fe/html/home.html" afterPath="$PROJECT_DIR$/fe/html/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fe/webpack-config.js" afterPath="$PROJECT_DIR$/fe/webpack-config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -75,7 +62,7 @@
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
-              <caret line="2" column="5" lean-forward="true" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
+              <caret line="2" column="5" lean-forward="false" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -487,7 +474,7 @@
       <workItem from="1497497352742" duration="7519000" />
       <workItem from="1497926690451" duration="14470000" />
       <workItem from="1497948393293" duration="2628000" />
-      <workItem from="1497951081797" duration="2009000" />
+      <workItem from="1497951081797" duration="2153000" />
     </task>
     <task id="LOCAL-00001" summary="change">
       <created>1494313755875</created>
@@ -500,7 +487,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119918000" />
+    <option name="totallyTimeSpent" value="120062000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -912,7 +899,7 @@
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
-          <caret line="2" column="5" lean-forward="true" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
+          <caret line="2" column="5" lean-forward="false" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
           <folding />
         </state>
       </provider>
