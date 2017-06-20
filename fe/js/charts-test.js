@@ -1,6 +1,7 @@
 /**
  * Created by humorHan on 2017/5/23.
  */
+require('drag.scss');
 var charts = require("util/charts.js");
 var data = [
     {xAxis:'2012',value:2141},

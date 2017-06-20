@@ -3,6 +3,7 @@
  */
 let addPosition = require('./addPosition.js');
 let throttle = require('./throttle.js');
+let sourceCode = require('./sourceCode.js');
 
 let main = {
     top: null,
@@ -11,6 +12,7 @@ let main = {
     init(){
         addPosition();
         throttle(20, 2000);
+        sourceCode();
     }
 };
 
