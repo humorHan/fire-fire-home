@@ -177,13 +177,13 @@ module.exports = function (isWatch, isDev) {
                         filename: "js/vendor-[hash].js",
                         minChunks: 5,
                         hash: true
-                    }), 
+                    }),
                     cssExtractTextPlugin,
                     //正式环境下压缩css(当然gulp压缩也ok) 注： 开发环境不可以压缩--会影响sourceMap文件
                     new OptimizeCssAssetsPlugin({
                         assetNameRegExp: /\.css$/g,
                         cssProcessor: require('cssnano'),
-                        cssProcessorOptions: { discardComments: {removeAll: true } },
+                        cssProcessorOptions: {discardComments: {removeAll: true}},
                         canPrint: true
                     })
                 );
