@@ -135,15 +135,21 @@ module.exports = function (isWatch, isDev) {
                     test: /\.(png|jpeg|jpg|gif)$/,
                     //loader: 'url?limit=8192&name=img/[hash:8]-[name].[ext]'
                     loader: 'url-loader?limit=8192&name=img/[name].[ext]'
-                }, {
-                    test: /^es5-sham\.min\.js|es5-shim\.min\.js$/,
+                },{
+                    test: /\.js$/,
+                    exclude: /node_modules/,
                     include: [
                         path.join(__dirname, 'js'),
                         path.join(__dirname, 'dep')
                     ],
-                    loader: 'babel-loader',
-                    exclude: node_modules
-                }, {
+                    use: {
+                        loader: 'babel-loader',
+                        options: {
+                            presets: ['env'],
+                            plugins: ['transform-runtime']
+                        }
+                    }
+                },{
                     test: /\.html$/,
                     include: [
                         path.join(__dirname, 'html')
