@@ -37,7 +37,7 @@ Drag.prototype = {
                 let e =  event || window.event;
                 _this.$moveDom.css("left", e.pageX - _this.x + _this.mx);
                 _this.$moveDom.css("top", e.pageY - _this.y + _this.my);
-                console.log(_this.x);
+                //console.log(_this.x);
             }
         });
         $(document).on("mouseup", function(event){

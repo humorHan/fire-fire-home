@@ -69,4 +69,7 @@
       <textMaps />
     </LinkMapSettings>
   </component>
+  <component name="ProjectPlainTextFileTypeManager">
+    <file url="file://$PROJECT_DIR$/fe/js/repaint.js" />
+  </component>
 </project>

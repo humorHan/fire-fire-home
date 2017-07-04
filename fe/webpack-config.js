@@ -132,7 +132,7 @@ module.exports = function (isWatch, isDev) {
                     ],
                     loader: 'tmodjs-loader'
                 }, {
-                    test: /\.(png|jpeg|jpg|gif)$/,
+                    test: /\.(png|jpeg|jpg|gif|ico)$/,
                     //loader: 'url?limit=8192&name=img/[hash:8]-[name].[ext]'
                     loader: 'url-loader?limit=8192&name=img/[name].[ext]'
                 },{
