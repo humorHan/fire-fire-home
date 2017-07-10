@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>全屏</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="renderer" content="webkit">
+    <style>
+        #test{
+            position: absolute;
+            top: 200px;
+            left: 200px;
+            border: 1px solid #e1e2e3;
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="test"></div>
+    <script>
+        // 找到适合浏览器的全屏方法
+        function launchFullScreen(element) {
+            if(element.requestFullScreen) {
+                element.requestFullScreen();
+            } else if(element.mozRequestFullScreen) {
+                element.mozRequestFullScreen();
+            } else if(element.webkitRequestFullScreen) {
+                element.webkitRequestFullScreen();
+            }
+        }
+
+        // 启动全屏模式
+        document.documentElement.onclick = function(){
+            launchFullScreen(document.getElementById("test"));
+        };
+    </script>
+</body>
+</html>

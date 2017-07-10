@@ -58,10 +58,12 @@ body {
   text-overflow: ellipsis;
 }
 
-.welcome {
+.welcome-wrap{
   position: fixed;
-  width: 60px;
-  cursor: pointer;
+  .welcome {
+    width: 60px;
+    cursor: pointer;
+  }
 }
 
 .wrapper {
