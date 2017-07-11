@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="humorHan">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="renderer" content="webkit">
+    <title>翻页</title>
+    <style>
+        .page-wrap {
+            padding: 50px;
+            background-color: #e2e3e4;
+            height: 200px;
+            -webkit-perspective: 600px;
+            transform-style: preserve-3d;
+        }
+
+        .item {
+            position: absolute;
+            list-style: none;
+            width: 100px;
+            height: 80px;
+            background-color: #FFF;
+        }
+
+        .turn {
+            animation-iteration-count: infinite;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-name: turn;
+            animation-name: turn;
+            -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
+
+        @keyframes turn {
+            to {
+                -webkit-transform: rotateY(-180deg);
+                transform: rotateY(-180deg);
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page-wrap">
+    <div class="item"></div>
+    <div class="item turn"></div>
+</div>
+</body>
+</html>
