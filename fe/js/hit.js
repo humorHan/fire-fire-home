@@ -1,7 +1,6 @@
 /**
  * Created by humorHan on 2017/5/24.
  */
-require('hit');
 let hit = {
     c: document.getElementById("hit"),
     cxt: null,

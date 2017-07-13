@@ -1,4 +1,3 @@
-require('drag.scss');
 var dragUtil = require("util/drag-util.js");
 
 var main = {

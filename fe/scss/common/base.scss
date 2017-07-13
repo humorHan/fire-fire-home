@@ -1,3 +1,5 @@
+@import "./normalize.css";
+
 .animated {
   animation-duration: 1s;
   animation-fill-mode: both;
@@ -41,7 +43,7 @@ li {
 body {
   font-size: 14px;
   color: #111;
-  background: url("../img/bg.png") center center repeat;
+  background: url("../../img/bg.png") center center repeat;
 }
 
 .left {

@@ -21,7 +21,7 @@ var entries = (function () {
         map[fileName] = filePath;
     });
     map['vendor'] = [
-        path.join(__dirname, 'js', 'common', 'base.js')
+        path.join(__dirname, 'js', 'common', 'base')
     ];
     return map;
 })();

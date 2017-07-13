@@ -6,6 +6,7 @@ let throttle = require('./throttle.js');
 let sourceCode = require('./sourceCode.js');
 let welcome = require('./welcome.js');
 let analysis = require('./analysis.js');
+require('common/base.scss');
 
 let main = {
     top: null,

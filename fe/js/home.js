@@ -1,7 +1,6 @@
 /**
  * Created by humorHan on 2017/5/23.
  */
-require("home.scss");
 let ajax = require("util/ajax.js");
 let articleTpl = require('articles.tpl');
 require('util/template-helper.js');

@@ -16,7 +16,6 @@
             -webkit-perspective: 600px;
             transform-style: preserve-3d;
         }
-
         .item {
             position: absolute;
             list-style: none;
@@ -24,7 +23,6 @@
             height: 80px;
             background-color: #FFF;
         }
-
         .turn {
             animation-iteration-count: infinite;
             -webkit-animation-iteration-count: infinite;
@@ -35,7 +33,6 @@
             -webkit-animation-fill-mode: both;
             animation-fill-mode: both;
         }
-
         @keyframes turn {
             to {
                 -webkit-transform: rotateY(-180deg);
@@ -49,5 +46,6 @@
     <div class="item"></div>
     <div class="item turn"></div>
 </div>
+<script src="../dep/jquery-3.1.1.min.js"></script>
 </body>
 </html>
