@@ -5,6 +5,7 @@ let addPosition = require('./addPosition.js');
 let throttle = require('./throttle.js');
 let sourceCode = require('./sourceCode.js');
 let welcome = require('./welcome.js');
+let analysis = require('./analysis.js');
 
 let main = {
     top: null,
@@ -15,6 +16,7 @@ let main = {
         throttle(20, 2000);
         sourceCode();
         welcome(2000);
+        analysis.init();
     }
 };
 
