@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="126104d0-4f90-41af-8ff5-82c5787259f9" name="Default" comment="change">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.htaccess" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="126104d0-4f90-41af-8ff5-82c5787259f9" name="Default" comment="change" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -196,7 +193,6 @@
         <option value="$PROJECT_DIR$/fe/js/common/comment.js" />
         <option value="$PROJECT_DIR$/fe/js/common/base.js" />
         <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/.htaccess" />
         <option value="$PROJECT_DIR$/fe/dep/util/ajax.js" />
         <option value="$PROJECT_DIR$/routes/base.js" />
         <option value="$PROJECT_DIR$/bin/www" />
@@ -204,6 +200,7 @@
         <option value="$PROJECT_DIR$/routes/position.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/routes/dep/mysqlConfig.js" />
+        <option value="$PROJECT_DIR$/.htaccess" />
       </list>
     </option>
   </component>
@@ -477,7 +474,7 @@
       <workItem from="1500013246691" duration="2188000" />
       <workItem from="1500263389214" duration="1779000" />
       <workItem from="1500344863719" duration="4645000" />
-      <workItem from="1500359346148" duration="7236000" />
+      <workItem from="1500359346148" duration="7311000" />
     </task>
     <task id="LOCAL-00001" summary="change">
       <created>1494313755875</created>
@@ -490,7 +487,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="183045000" />
+    <option name="totallyTimeSpent" value="183120000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -877,7 +874,7 @@
     <entry file="file://$PROJECT_DIR$/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="4" column="18" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="50" />
+          <caret line="4" column="50" lean-forward="true" selection-start-line="4" selection-start-column="50" selection-end-line="4" selection-end-column="50" />
           <folding />
         </state>
       </provider>
