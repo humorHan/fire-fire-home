@@ -6,9 +6,11 @@ let router = express.Router();
 let EventProxy = require('eventproxy');
 let connect = require('./base.js');
 let checkParamNull = require("./dep/checkParamNull.js");
+let mysqlConfig = require('./dep/mysqlConfig.js');
+
 let SQL = {
-    'getPosition': 'select * from fireFireHome.user_position',
-    'addPosition': 'insert into fireFireHome.user_position(locationType, position, formattedAddress, addressComponent, isConverted, visitTime) values(?, ?, ?, ?, ?, ?)'
+    'getPosition': 'select * from ' + mysqlConfig.DB_NAME + '.user_position',
+    'addPosition': 'insert into ' + mysqlConfig.DB_NAME + '.user_position(locationType, position, formattedAddress, addressComponent, isConverted, visitTime) values(?, ?, ?, ?, ?, ?)'
 };
 
 //获取用户位置数据

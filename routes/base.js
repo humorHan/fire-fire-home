@@ -1,25 +1,23 @@
 let EventProxy = require('eventproxy');
+let mysql = require('mysql');
+let mysqlConfig = require('./dep/mysqlConfig.js');
 
-const HOST = '127.0.0.1';
-const USER = 'root';
-const PWD = '';
-var mysql = require('mysql');
 //var logger = require('../toolLogConfig/logger');
 //logger.setLevel('INFO');
 
-var pool = mysql.createPool({
+let pool = mysql.createPool({
     connectionLimit: 30,
-    host: HOST,
-    user: USER,
-    password: PWD
+    host: mysqlConfig.HOST,
+    user: mysqlConfig.USER,
+    password: mysqlConfig.PWD
 });
 
 function connect(opt) {
     pool.getConnection(function (err, connection) {
-        var ep = new EventProxy();
+        let ep = new EventProxy();
         connection.query(opt.sql, opt.param || null, function (err, result) {
             connection.release(); //释放链接
-            var resultArray = {
+            let resultArray = {
                 status: 1,
                 //message: '获取数据成功',
                 message: '操作数据成功',

@@ -2,11 +2,12 @@ let express = require('express');
 let router = express.Router();
 let EventProxy = require('eventproxy');
 let connect = require('./base.js');
+let mysqlConfig = require('./dep/mysqlConfig.js');
 let checkParamNull = require("./dep/checkParamNull.js");
 let SQL = {
-    'getArticles': 'select * from fireFireHome.articles',
-    'addArticles': 'insert into fireFireHome.articles(title, type, original, label, createTime, summary, articleURL, readNum, star) values(?, ?, ?, ?, ?, ?, ?, ?, ?)',
-    'addVisitNumById': 'update fireFireHome.articles set readNum = readNum + 1 where id = ?'
+    'getArticles': 'select * from ' + mysqlConfig.DB_NAME +'.articles',
+    'addArticles': 'insert into ' + mysqlConfig.DB_NAME + '.articles(title, type, original, label, createTime, summary, articleURL, readNum, star) values(?, ?, ?, ?, ?, ?, ?, ?, ?)',
+    'addVisitNumById': 'update ' + mysqlConfig.DB_NAME + '.articles set readNum = readNum + 1 where id = ?'
 };
 
 // 获取文章
@@ -27,7 +28,7 @@ router.get('/getArticles', function (req, res, next) {
 router.post('/addArticleVisitNum', function (req, res, next) {
     let ep = new EventProxy();
     let body = req.body;
-    console.log(body);
+    //console.log(body);
     if (checkParamNull(ep, res, [
             {
                 param: body.articleId,
