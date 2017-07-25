@@ -1,10 +1,10 @@
 /**
  * Created by humorHan on 2017/6/20.
  */
-let art = require('tmodjs-loader/runtime');
+let art = require('art-template/lib/runtime');
 
 //知识标签
-art.helper('labelFormat', function (label) {
+art.labelFormat = function (label) {
     let html = '',
         labelArr = label.split('&');
     labelArr.forEach((item, index) => {
@@ -15,10 +15,10 @@ art.helper('labelFormat', function (label) {
         }
     });
     return html;
-});
+};
 
 //时间戳转化方法
-art.helper('dateFormat', function (date, format) {
+art.dateFormat = function (date, format) {
     date = new Date(parseInt(date.replace("/Date(", "").replace(")/", ""), 10));
     date = new Date(date);
     let map = {
@@ -45,4 +45,4 @@ art.helper('dateFormat', function (date, format) {
         return all;
     });
     return format;
-});
+};

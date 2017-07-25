@@ -37,7 +37,8 @@
     "sass-loader": "^4.0.0",
     "script-loader": "*",
     "style-loader": "^0.13.1",
-    "tmodjs-loader": "^1.0.1",
+    "art-template": "4.12.1",
+    "art-template-loader": "^1.4.2",
     "url-loader": "^0.5.7",
     "vinyl-paths": "*",
     "webpack": "^2.5.1"

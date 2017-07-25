@@ -130,7 +130,7 @@ module.exports = function (isWatch, isDev) {
                         path.join(__dirname, 'tpl'),
                         path.join(__dirname, '/dep/components')
                     ],
-                    loader: 'tmodjs-loader'
+                    loader: 'art-template-loader'
                 }, {
                     test: /\.(png|jpeg|jpg|gif|ico)$/,
                     //loader: 'url?limit=8192&name=img/[hash:8]-[name].[ext]'
