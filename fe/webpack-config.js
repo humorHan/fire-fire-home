@@ -171,6 +171,12 @@ module.exports = function (isWatch, isDev) {
             } else {
                 pluginsArr.push(
                     new webpack.optimize.UglifyJsPlugin({
+                        compress: {
+                            warnings: false,
+                            drop_console: true,
+                            pure_funcs: ['console.log']
+                        },
+                        sourceMap: false,
                         output: {
                             comments: false
                         },

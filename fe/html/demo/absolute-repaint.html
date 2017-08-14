@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="优化,绝对定位,重绘,重排">
+    <meta name="author" content="humorHan">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="renderer" content="webkit">
+    <title>绝对定位--绝不止定个位那么简单</title>
+    <style>
+        .dom1{
+            /*TODO 有这个绝对定位 则dom2不会发生重绘，没有该定位则dom2会发生重绘*/
+            position: absolute;
+        }
+        .dom2{
+            margin: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="dom1">dom1</div>
+    <div class="dom2">dom2</div>
+    <script>
+        /** 现象： dom1有绝对定位 则dom2不会发生重绘，没有该定位则dom2会发生重绘
+         *  结论： 合理运用绝对定位--减少重排重绘
+         *  验证： 打开新版本google(旧版本自己去升级，不赘述)，新版本控制台下找到render->勾选Paint Flashing)，可以直观看到重绘元素有哪些
+         */
+
+        var dom1 = document.getElementsByClassName("dom1")[0],
+            mt = dom1.style.marginTop,
+            i = 0;
+        var timer = setInterval(function(){
+            i+=5;
+            dom1.style.marginTop = i + mt + 'px';
+            if (dom1.style.marginTop >= 2000) {
+                console.info('测个试，没必要整这么大值吧？');
+                clearInterval(timer);
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
