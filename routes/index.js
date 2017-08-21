@@ -10,6 +10,9 @@ let SQL = {
     'addVisitNumById': 'update ' + mysqlConfig.DB_NAME + '.articles set readNum = readNum + 1 where id = ?'
 };
 
+router.get('/', function (req, res, next) {
+    res.render('home');
+});
 // 获取文章
 router.get('/getArticles', function (req, res, next) {
     let ep = new EventProxy();

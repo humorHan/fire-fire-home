@@ -84,6 +84,7 @@ module.exports = function (isWatch, isDev) {
             //publicPath: "/fire-fire-home/dist/",
             publicPath: "../",
             libraryTarget: 'umd',
+            pathinfo: isDev ? true : false,
             filename: isDev ? "js/[name].js" : "js/[name]-[chunkhash].js",
             chunkFilename: isDev ? "js/[name]-chunk.js" : "js/[name]-chunk-[chunkhash].js"
         },
@@ -134,7 +135,7 @@ module.exports = function (isWatch, isDev) {
                 }, {
                     test: /\.(png|jpeg|jpg|gif|ico)$/,
                     //loader: 'url?limit=8192&name=img/[hash:8]-[name].[ext]'
-                    loader: 'url-loader?limit=8192&name=img/[name].[ext]'
+                    loader: 'url-loader?limit=2048&name=img/[name].[ext]'
                 },{
                     test: /\.js$/,
                     exclude: /node_modules/,
