@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="keywords" content="new-swiper">
+    <meta name="author" content="humorHan">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <title>测试new-swiper-移动端</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+        .wrapper {
+            position: relative;
+            height: 30%;
+            width: 100%;
+            left: 0;
+            top: 0;
+            overflow: hidden;
+        }
+
+        .slide-item {
+            position: absolute;
+            width: 40%;
+            height: auto;
+            margin-left: 30%;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        /*为了清晰看到效果，写如下样式覆盖本网站基础样式*/
+        ul.wrapper{
+            width: 90%;
+            opacity:1;
+        }
+    </style>
+</head>
+<body>
+<ul class="wrapper">
+    <li class="slide-item">
+        <img src="../../img/man.png" alt="">
+    </li>
+    <li class="slide-item">
+        <img src="../../img/lady.png" alt="">
+    </li>
+    <li class="slide-item">
+        <img src="../../img/lady.png" alt="">
+    </li>
+    <li class="slide-item">
+        <img src="../../img/family.png" alt="">
+    </li>
+
+    <li class="slide-item">
+        <img src="../../img/family.png" alt="">
+    </li>
+</ul>
+<div class="pre">点击按钮模拟左滑</div>
+<script src="../dep/jquery-3.1.1.min.js"></script>
+</body>
+</html>

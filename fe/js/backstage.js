@@ -5,6 +5,13 @@ require("backstage.scss");
 var ajax = require("util/ajax.js");
 
 var main = {
+    init(){
+        //TODO 右上角添加编写文章的按钮，点击弹出弹框编写
+        //TODO 后台增加一个字段存储文章内容
+        let E = window.wangEditor;
+        let editor = new E('#editor');
+        editor.create();
+    },
     initBtns(){
         let _this = this;
         // submit
@@ -40,5 +47,6 @@ var main = {
 };
 
 $(function () {
+    main.init();
     main.initBtns();
 });
